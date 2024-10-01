@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teka-Teki Silang TKJ</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.jpg" alt="Logo" class="logo"> <!-- Ganti dengan path logo Anda -->
+            <h2>TKJ</h2>
+        </div>
+        <ul>
+            <li><a href="tk.html"><i class="fas fa-comments"></i> Tebak Kata</a></li>
+            <!-- Tambahkan item menu lain di sini -->
+            <li><a href="https://sites.google.com/view/webprofilesimple"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            <li><a href="https://youtube.com/@foxxsclay666"><i class="fa-brands fa-youtube"></i> Channel</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Teka-Teki Silang TKJ</h1>
+        <p>Soal-soal ini dijawab mendatar atau menyamping. Isi kotakan putih sesuai dengan jumlah huruf dari jawaban.</p>
+        <div class="crossword-container">
+            <div class="crossword" id="crossword1">
+            <table>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">1</span><input type="text" maxlength="1" data-answer="P" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="C" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">2</span><input type="text" maxlength="1" data-answer="F" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="I" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="B" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="E" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="R" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="O" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="P" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="I" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="K" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">3</span><input type="text" maxlength="1" data-answer="O" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="O" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">4</span><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="K" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="J" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">5</span><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="C" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="P" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">6</span><input type="text" maxlength="1" data-answer="E" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="H" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="E" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="R" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="N" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="E" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">7</span><input type="text" maxlength="1" data-answer="F" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="P" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">8</span><input type="text" maxlength="1" data-answer="R" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="O" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="U" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="E" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="R" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">9</span><input type="text" maxlength="1" data-answer="T" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="S" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">10</span><input type="text" maxlength="1" data-answer="B" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="A" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="C" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="K" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="B" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="O" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="N" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="E" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">11</span><input type="text" maxlength="1" data-answer="V" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="P" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="N" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">12</span><input type="text" maxlength="1" data-answer="a" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="l" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="o" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="g" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">13</span><input type="text" maxlength="1" data-answer="c" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="m" class="input-box"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="s" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">14</span><input type="text" maxlength="1" data-answer="a" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="n" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="a" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="j" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="e" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="m" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="e" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="n" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="crossword" id="crossword2" style="display: none;">
+            <table>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><span class="number">15</span><input type="text" maxlength="1" data-answer="a" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="n" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="a" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="j" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="e" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="m" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="e" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+                <tr>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="white"><input type="text" maxlength="1" data-answer="n" class="input-box"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                    <td class="black"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="navigation">
+            <button id="prev" class="nav-btn" onclick="navigate(-1)">&#9664;</button>
+            <button id="next" class="nav-btn" onclick="navigate(1)">&#9654;</button>
+        </div>
+        <button id="submit-button" class="nav-btn">Periksa Jawaban</button>
+    </div>
+        <div class="clues">
+            <h2>Pertanyaan</h2>
+            <ol>
+                <li>Nama lain komputer pribadi ( pribadi computer ) - MENYAMPING</li>
+                <li>Jenis kabel yang digunakan untuk menghubungkan jaringan internet yang lebih cepat- MENYAMPING</li>
+                <li>Pengguna yang memiliki akses penuh ke jaringan/sistem - MENURUN</li>
+                <li>Singkatan Teknik Komputer Jaringan - MENYAMPING</li>
+                <li>Protokol yang digunakan untuk mengirimkan data antar jaringan dengan metode paket - MENYAMPING</li>
+                <li>Protokol untuk menghubungkan perangkat jaringan secara lokal - MENYAMPING</li>
+                <li>Protokol untuk transfer file antar komputer - MENYAMPING</li>
+                <li>Perangkat yang berfungsi sebagai pintu masuk jaringan ke internet - MENYAMPING</li>
+                <li>Perangkat yang berfungsi sebagai pengatur lalu lintas jaringan - MENURUN</li>
+                <li>Bagian dari jaringan yang membawa lalu lintas data antara jaringan yang lebih kecil - MENYAMPING</li>
+                <li>Koneksi jaringan pribadi yang aman melalui internet. - MENYAMPING</li>
+                <li>Jenis sinyal yang berbentuk gelombang kontinu dan digunakan dalam transmisi data tradisional - MENURUN</li>
+                <li>Nama lain Content Management System - MENYAMPING</li>
+                <li>Kata yang merujuk pada proses mengelola dan mendistribusikan konten digital - MENURUN</li>
+                <li>15. Koneksi internet yang menggunakan kabel telepon (3 huruf) - MENURUN</li>
+                <li>16. Alat untuk mengubah sinyal digital ke analog (8 huruf) - MENURUN</li>
+                <li>17. Jaringan lokal (LAN) adalah jenis jaringan yang mencakup area (3 huruf) - MENURUN</li>
+                <li>18. Kartu yang digunakan untuk menghubungkan komputer ke jaringan (3 huruf) - MENURUN</li>
+                <li>19. Istilah untuk proses pengiriman data melalui jaringan (9 huruf) - MENURUN</li>
+            </ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

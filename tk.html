@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Kata TKJ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .word-search {
+            margin: 20px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #adb5bd;
+        }
+
+        td.found {
+            color: rgb(0, 255, 0); /* Warna hijau untuk huruf yang ditemukan */
+        }
+
+        .input-section {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Tebak Kata TKJ</h1>
+        <p>Temukan kata-kata berikut dalam grid:</p>
+        <div class="word-search">
+            <table>
+                <tr>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="N">N</td>
+                    <td data-letter="F">F</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="R">R</td>
+                    <td data-letter="M">M</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="B">B</td>
+                </tr>
+                <tr>
+                    <td data-letter="L">L</td>
+    <td data-letter="D">D</td>
+    <td data-letter="K">K</td>
+    <td data-letter="E">E</td>
+    <td data-letter="T">T</td>
+    <td data-letter="W">W</td>
+    <td data-letter="X">X</td>
+    <td data-letter="Y">Y</td>
+    <td data-letter="Z">Z</td>
+    <td data-letter="S">S</td>
+                    <td data-letter="M">M</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="A">A</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="B">B</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="E">E</td>
+                    <td data-letter="L">L</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="S">S</td>
+                    <td data-letter="P">P</td>
+                    <td data-letter="R">R</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="K">K</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="L">L</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="Z">Z</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="H">H</td>
+                    <td data-letter="R">R</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="K">K</td>
+                    <td data-letter="M">M</td>
+                    <td data-letter="L">L</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="K">K</td>
+                    <td data-letter="E">E</td>
+                    <td data-letter="S">S</td>
+                </tr>
+                <tr>
+                    <td data-letter="A">A</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="M">M</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="N">N</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="R">R</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="S">R</td>
+                </tr>
+                <tr>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="C">C</td>
+                    <td data-letter="V">V</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="P">P</td>
+                    <td data-letter="B">B</td>
+                    <td data-letter="U">U</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="J">J</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="F">F</td>
+                </tr>
+                <tr>
+                    <td data-letter="R">R</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="X">X</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Z">Z</td>
+                    <td data-letter="P">P</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="K">K</td>
+                    <td data-letter="U">U</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="Q">Q</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="E">E</td>
+                    <td data-letter="K">K</td>
+                    <td data-letter="N">N</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="L">L</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="G">G</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="E">E</td>
+                </tr>                
+                <tr>
+                    <td data-letter="R">B</td>
+                    <td data-letter="J">J</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="V">V</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="C">C</td>
+                    <td data-letter="R">R</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="P">P</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="J">J</td>
+                    <td data-letter="Q">Q</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="Z">Z</td>
+                    <td data-letter="V">V</td>
+                    <td data-letter="X">X</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="W">W</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="M">M</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="R">K</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="K">K</td>
+                    <td data-letter="H">H</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="M">M</td>
+                    <td data-letter="L">L</td>
+                    <td data-letter="E">E</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="W">W</td>
+                    <td data-letter="X">X</td>
+                </tr>
+                <tr>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="F">F</td>
+                    <td data-letter="G">G</td>
+                    <td data-letter="N">N</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="C">C</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="S">S</td>
+                    <td data-letter="B">B</td>
+                    <td data-letter="U">U</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="F">F</td>
+                    <td data-letter="G">G</td>
+                    <td data-letter="N">N</td>
+                    <td data-letter="Z">Z</td>
+                    <td data-letter="P">P</td>
+                    <td data-letter="O">O</td>
+                    <td data-letter="R">R</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="T">T</td>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                </tr>
+                <tr>
+                    <td data-letter="D">D</td>
+                    <td data-letter="Y">Y</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="E">E</td>
+                    <td data-letter="J">J</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="R">R</td>
+                    <td data-letter="I">I</td>
+                    <td data-letter="N">N</td>
+                    <td data-letter="G">G</td>
+                    <td data-letter="A">A</td>
+                    <td data-letter="N">N</td>
+                    <td data-letter="I">I</td>
+                </tr>
+            </table>
+        </div>
+        <div class="input-section">
+            <input type="text" id="user-answer" placeholder="Masukkan jawaban..." />
+            <button id="submit-answer">Kirim</button>
+        </div>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        const wordsToFind = ["JAVASCRIPT", "HTML", "CSS", "PROTOKOL", "JARINGAN", "RAID", "ADMINISTRATOR", "INFORMASI", "DATABASE", "TEKNOLOGI"];
+        const submitButton = document.getElementById('submit-answer');
+        const userAnswerInput = document.getElementById('user-answer');
+        const resultDiv = document.getElementById('result');
+
+        submitButton.addEventListener('click', () => {
+            const answer = userAnswerInput.value.toUpperCase().trim();
+            
+           
+            if (answer === '') {
+                Swal.fire({
+                    title: 'Oops!',
+                    text: 'Masukkan kata yang ingin dicari!',
+                    icon: 'warning'
+                });
+                return;
+            }
+            
+            if (wordsToFind.includes(answer)) {
+                Swal.fire({
+                    title: 'Bagus!',
+                    text: 'Kata ditemukan: ' + answer,
+                    icon: 'success'
+                });
+                highlightWord(answer);
+                resultDiv.innerHTML += `<div>${answer}</div>`;
+                userAnswerInput.value = '';
+                wordsToFind.splice(wordsToFind.indexOf(answer), 1);
+            } else {
+                Swal.fire({
+                    title: 'Oops!',
+                    text: 'Kata tidak ditemukan, coba lagi!',
+                    icon: 'error'
+                });
+            }
+        });
+
+        function highlightWord(word) {
+            const cells = document.querySelectorAll('.word-search td');
+            
+            let found = false;
+            for (let i = 0; i < cells.length; i++) {
+                if (cells[i].dataset.letter === word[0]) {
+                    found = true;
+                    let j = 0;
+                    const startIdx = i;
+
+                    while (j < word.length && (i + j) < cells.length && cells[i + j].dataset.letter === word[j]) {
+                        j++;
+                    }
+
+                    if (j === word.length) {
+                        for (let k = 0; k < word.length; k++) {
+                            cells[startIdx + k].classList.add('found');
+                            cells[startIdx + k].style.color = 'green'; 
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

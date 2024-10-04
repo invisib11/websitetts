@@ -357,28 +357,27 @@
         });
 
         function highlightWord(word) {
-            const cells = document.querySelectorAll('.word-search td');
-            
-            let found = false;
-            for (let i = 0; i < cells.length; i++) {
-                if (cells[i].dataset.letter === word[0]) {
-                    found = true;
-                    let j = 0;
-                    const startIdx = i;
+    const cells = document.querySelectorAll('.word-search td');
+    
+    for (let i = 0; i < cells.length; i++) {
+        if (cells[i].dataset.letter === word[0]) {
+            let j = 0;
+            const startIdx = i;
 
-                    while (j < word.length && (i + j) < cells.length && cells[i + j].dataset.letter === word[j]) {
-                        j++;
-                    }
+            while (j < word.length && (i + j) < cells.length && cells[i + j].dataset.letter === word[j]) {
+                j++;
+            }
 
-                    if (j === word.length) {
-                        for (let k = 0; k < word.length; k++) {
-                            cells[startIdx + k].classList.add('found');
-                            cells[startIdx + k].style.color = 'green'; 
-                        }
-                    }
+            if (j === word.length) {
+                for (let k = 0; k < word.length; k++) {
+                    cells[startIdx + k].classList.add('found');
+                    cells[startIdx + k].style.color = 'white';
+                    cells[startIdx + k].style.backgroundColor = 'green';
                 }
             }
         }
+    }
+}
     </script>
 </body>
 </html>
